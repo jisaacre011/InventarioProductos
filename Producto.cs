@@ -1,6 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations; // <--- NECESARIO PARA [Key]
-using System.ComponentModel.DataAnnotations.Schema; // <--- NECESARIO PARA [Table] y [Column]
+using System.ComponentModel.DataAnnotations; 
+using System.ComponentModel.DataAnnotations.Schema; 
 
 namespace EntityFramework
 {
@@ -10,9 +10,6 @@ namespace EntityFramework
         [Key]
         public int id { get; set; }
 
-        // CAMBIO IMPORTANTE: 
-        // Como la clase se llama "Producto", la propiedad no puede llamarse igual.
-        // Le ponemos "Nombre" en C# pero le decimos que en SQL busque la columna "Producto"
         [Column("Producto")]
         public string Nombre { get; set; }
 
